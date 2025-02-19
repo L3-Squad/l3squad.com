@@ -12,7 +12,7 @@ const projects = [
   {
     title: "Tandem Train",
     icon: LightBulbIcon,
-    description: "This tool provides videos and content about L3Squad. Interns interested in joining L3Squad can use it to learn more about the organization and complete an assessment before onboarding. It is similar to Moodle, offering a structured learning experience.",
+    description: "This tool provides videos and content about L3Squad. Interns interested in joining L3Squad can use it to learn more about the community and complete an assessment before onboarding. It is similar to Moodle, offering a structured learning experience.",
   },
   {
     title: "Waggle",
@@ -31,37 +31,37 @@ const opensource = [
     title: "Python Basics",
     icon: RocketLaunchIcon,
     link: "https://github.com/L3-Squad/python-basics",
-    description: "This repository contains basic Python programs and concepts. It is a resource for learning and practicing Python programming.",
+    description: "A collection of fundamental Python programs and concepts, providing a valuable resource for students to learn and practice Python programming.",
   },
   {
     title: "Java Basics",
     icon: BookOpenIcon,
     link: "https://github.com/L3-Squad/java-basics",
-    description: "This repository contains basic Java programs and concepts. It is a resource for learning and practicing Java programming.",
+    description: "A set of essential Java programs and concepts, helping students build and strengthen their Java programming skills.",
   },
   {
     title: "Java Master",
     icon: BugAntIcon,
     link: "https://github.com/l3squad-com/java-master",
-    description: "This repository is used to take quick quizzes on Java and check knowledge about Java.",
+    description: "A platform for students to take quick quizzes on Java and test their knowledge of the language",
   },
   {
     title: "React Chef",
     icon: PuzzlePieceIcon,
     link: "https://github.com/web-slate/react-chef",
-    description: "React-Chef is a Node Module that helps you create React boilerplate apps instantly, prescribing best practices.",
+    description: "React-Chef is a Node module that helps students quickly set up React projects with best practices, making it easier to start building applications",
   },
   {
     title: "Transactify",
     icon: CodeBracketIcon,
     link: "https://github.com/web-slate/transactify",
-    description: "This repository contains a Python module for predicting transaction categorization.",
+    description: "A Python module designed for predicting transaction categorization, helping students understand and implement machine learning in finance.",
   },
   {
     title: "GitAI",
     icon: BriefcaseIcon,
     link: "https://github.com/web-slate/gitai",
-    description: "GitAI is an ML project aimed at assisting developers in learning and using Git commands effectively.",
+    description: "GitAI is an ML project that assists students in learning and using Git commands efficiently, making version control easier to grasp",
   },
 ];
 

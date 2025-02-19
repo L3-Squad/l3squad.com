@@ -22,7 +22,7 @@ export const Testimonials = () => {
       image: praveenImg,
       name: "Praveen",
       title: "Full Stack Intern",
-      experience:"2 years",
+      experience: "1 year",
       bgColor: "bg-red-50",
       linkedin: "https://www.linkedin.com/in/prvnmhsh/",
     },
@@ -31,7 +31,7 @@ export const Testimonials = () => {
       image: VenkatImg,
       name: "Venkat",
       title: "Full Stack Engineer",
-      experience:"18 years",
+      experience: "18 years",
       bgColor: "bg-green-50",
       linkedin: "https://www.linkedin.com/in/venkatraman-r-ai/",
     },
@@ -40,7 +40,7 @@ export const Testimonials = () => {
       image: YuvarajImg,
       name: "Yuvaraj",
       title: "Senior Frontend Developer",
-      experience:"10 years",
+      experience: "10 years",
       bgColor: "bg-blue-50",
       linkedin: "https://www.linkedin.com/in/yuvarajravi2/",
     },
@@ -49,7 +49,7 @@ export const Testimonials = () => {
       image: KarthiImg,
       name: "Karthikeyan",
       title: "DevOps Lead",
-      experience:"2 years",
+      experience: "2 years",
       bgColor: "bg-yellow-50",
       linkedin: "https://www.linkedin.com/in/karthikeyan",
     },
@@ -58,7 +58,7 @@ export const Testimonials = () => {
       image: SabarinathanImg,
       name: "Sabarinathan",
       title: "Martech/Integration Engineer",
-      experience:"11 years",
+      experience: "11 years",
       bgColor: "bg-purple-50",
       linkedin: "https://www.linkedin.com/in/sabarinathan-k-51784260/",
     },
@@ -72,46 +72,39 @@ export const Testimonials = () => {
         <Swiper
           modules={[Pagination]}
           pagination={{ clickable: true }}
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
             640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },  
+            768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          
         >
           {testimonialData.map((testimonial, index) => (
             <SwiperSlide key={index} className="flex items-stretch">
-            <Link href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" className="w-full">
-              <div
-                className={`flex flex-col justify-between w-full px-14 py-14 rounded-2xl ${testimonial.bgColor} 
-                dark:bg-trueGray-800 h-[400px] hover:shadow-lg transition-shadow`}
-              >
-                <p className="text-2xl leading-normal flex-1">{testimonial.text}</p>
-                <Avatar image={testimonial.image} name={testimonial.name} title={testimonial.title} experience={testimonial.experience}/>
-              </div>
-            </Link>
-          </SwiperSlide>                    
+              <Link href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" className="w-full">
+                <div
+                  className={`flex flex-col justify-between w-full px-6 py-6 md:px-10 md:py-10 rounded-2xl ${testimonial.bgColor} 
+                dark:bg-trueGray-800 min-h-[350px] md:min-h-[400px] hover:shadow-lg transition-shadow`}
+                >
+                  <p className="text-lg md:text-2xl leading-normal flex-1">{testimonial.text}</p>
+                  <Avatar image={testimonial.image} name={testimonial.name} title={testimonial.title} experience={testimonial.experience} />
+                </div>
+              </Link>
+            </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Navigation Buttons */}
-        <div className="absolute top-1/2 left-3 transform -translate-y-1/2 z-10">
-          <button
-            className="p-3 bg-gray-800 rounded-full hover:bg-gray-600"
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            <ArrowLeftIcon className="w-5 h-5 text-white" />
+        {/* Navigation Buttons - Hide on Small Screens */}
+        <div className="hidden md:block absolute top-1/2 left-3 transform -translate-y-1/2 z-10">
+          <button className="p-2 md:p-3 bg-gray-800 rounded-full hover:bg-gray-600" onClick={() => swiperRef.current?.slidePrev()}>
+            <ArrowLeftIcon className="w-4 h-4 md:w-5 md:h-5 text-white" />
           </button>
         </div>
-        <div className="absolute top-1/2 right-3 transform -translate-y-1/2 z-10">
-          <button
-            className="p-3 bg-gray-800 rounded-full hover:bg-gray-600"
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            <ArrowRightIcon className="w-5 h-5 text-white" />
+        <div className="hidden md:block absolute top-1/2 right-3 transform -translate-y-1/2 z-10">
+          <button className="p-2 md:p-3 bg-gray-800 rounded-full hover:bg-gray-600" onClick={() => swiperRef.current?.slideNext()}>
+            <ArrowRightIcon className="w-4 h-4 md:w-5 md:h-5 text-white" />
           </button>
         </div>
       </div>
@@ -128,21 +121,14 @@ interface AvatarProps {
 
 function Avatar(props: Readonly<AvatarProps>) {
   return (
-    <div className="flex items-center mt-8 space-x-3">
-      <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-        <Image
-          src={props.image}
-          width={56}
-          height={56}
-          alt="Avatar"
-          placeholder="blur"
-          className="object-cover"
-        />
+    <div className="flex items-center mt-6 md:mt-8 space-x-3">
+      <div className="flex-shrink-0 overflow-hidden rounded-full w-12 h-12 md:w-14 md:h-14">
+        <Image src={props.image} width={56} height={56} alt="Avatar" placeholder="blur" className="object-cover" />
       </div>
       <div>
-        <div className="text-2xl font-semibold hover:underline">{props.name}</div>
-        <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
-        <div className="text-gray-600 dark:text-gray-400">{props.experience}</div>
+        <div className="text-lg md:text-2xl font-semibold hover:underline">{props.name}</div>
+        <div className="text-gray-600 dark:text-gray-400 text-sm md:text-base">{props.title}</div>
+        <div className="text-gray-600 dark:text-gray-400 text-sm md:text-base">{props.experience}</div>
       </div>
     </div>
   );
