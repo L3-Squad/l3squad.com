@@ -22,7 +22,15 @@ export const Faq = () => {
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300">
-                    {item.answer}
+                  {Array.isArray(item.answer) ? (
+                      <ul className="list-disc list-outside pl-5 space-y-1">
+                        {item.answer.map((point, i) => (
+                          <li key={i}>{point}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>{item.answer}</p>
+                    )}
                   </DisclosurePanel>
                 </>
               )}
@@ -52,12 +60,31 @@ const faqdata = [
   
   {
     question: "What soft skills will I develop?",
-    answer: "Communication & Public Speaking Problem-Solving & Critical Thinking Collaboration & Teamwork Leadership & Mentorship Time Management & Productivity Emotional Intelligence Negotiation & Persuasion.",
+    answer: [
+      "Communication and Public Speaking",
+      "Problem-Solving and Critical Thinking",
+      "Collaboration and Teamwork",
+      "Leadership and Mentorship",
+      "Time Management and Productivity",
+      "Emotional Intelligence",
+      "Negotiation and Persuasion",
+    ],
   },
   {
     question: "What tech skills will I develop?",
-    answer: "Coding & Programming Data Analytics & Problem-Solving Algorithmic Thinking & Logical Reasoning.Software Development & Engineering System Design & Architecture Cloud Computing & DevOps Cybersecurity Awareness Automation & Scripting Database Management AI & Machine Learning Fundamentals",
-  },
+    answer:  [
+      "Coding and Programming",
+      "Data Analytics and Problem-Solving",
+      "Algorithmic Thinking and Logical Reasoning",
+      "Software Development and Engineering",
+      "System Design and Architecture",
+      "Cloud Computing and DevOps",
+      "Cybersecurity Awareness",
+      "Automation and Scripting",
+      "Database Management",
+      "AI and Machine Learning Fundamentals",
+    ],
+   },
  
   {
     question: "Do I need prior experience to contribute? ",
