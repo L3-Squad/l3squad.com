@@ -58,8 +58,8 @@ export function PopupWidget() {
       <Disclosure>
         {({ open }) => (
           <>
-            <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-customBlue rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease">
-              <span className="sr-only">Open Contact form Widget</span>
+                <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-customBlue rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease">
+                <span className="sr-only">Open Contact form Widget</span>
               <Transition
                 show={!open}
                 enter="transition duration-200 transform ease"
@@ -118,7 +118,7 @@ export function PopupWidget() {
               as="div"
             >
               <DisclosurePanel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
-                <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
+              <div className="flex flex-col items-center justify-center h-32 p-5 bg-customBlue">
                   <h3 className="text-lg text-white">Are you Intrested in joining our Community?</h3>
                   <p className="text-white opacity-50">
                     Kindly fill the form below to get in touch with us.
@@ -240,7 +240,7 @@ export function PopupWidget() {
                       <div className="mb-3">
                         <button
                           type="submit"
-                          className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+                          className="w-full px-3 py-4 text-white bg-customBlue rounded-md focus:bg-customBlue focus:outline-none"
                         >
                           {isSubmitting ? (
                             <svg
