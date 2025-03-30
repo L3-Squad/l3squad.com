@@ -31,7 +31,7 @@ export default function Home() {
         <SectionTitle preTitle="WANT TO KNOW MORE?" title="How to Get Started with Our Lifelong Learning Community">
           This section is to highlight a promo or demo video of our community "Unlock your potential and achieve career growth by engaging with a supportive community: "L3 SQUAD"
         </SectionTitle>
-        <Video videoId="DekAMet0qA8" />
+        <Video videoId="KH_N1sTeyn8" />
       </section>
 
       <section id="testimonials">
