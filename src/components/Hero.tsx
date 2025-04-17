@@ -53,7 +53,7 @@ export const Hero = () => {
             className="flex gap-4 mt-5 ml-5"
           >
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdm8hipu_JXi_YWzW4h5Dzof46XDPjaYyMq9A02U3S_SSC4pQ/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe5gJqM62n8Sg0H3cdbE_O7-CAI0Tz1A6DYh3BJY1YDr_fenw/viewform"
               target="_blank"
               rel="noopener"
               className="px-8 py-4 text-lg font-medium text-center text-white bg-customBlue rounded-md"
@@ -62,7 +62,7 @@ export const Hero = () => {
             </Link>
 
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdm8hipu_JXi_YWzW4h5Dzof46XDPjaYyMq9A02U3S_SSC4pQ/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe5gJqM62n8Sg0H3cdbE_O7-CAI0Tz1A6DYh3BJY1YDr_fenw/viewform"
               target="_blank"
               rel="noopener"
               className="px-8 py-4 text-lg font-medium text-center text-white bg-customBlue rounded-md"
