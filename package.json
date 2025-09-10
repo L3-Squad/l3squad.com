@@ -4,7 +4,7 @@
   "description": "L3 Squad is a community of developers, designers, and creators who are passionate about building products and services that make a difference.",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npx next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
