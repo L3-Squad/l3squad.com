@@ -5,7 +5,11 @@ import { Container } from "@/components/Container";
 
 export function Footer() {
   const navigation = ["L3 SQUAD", "Features", "Community", "Benefits", "Blog"];
-  const legal = ["Terms", "Privacy", "Legal"];
+  const legal = [
+    { name: "Terms", href: "###" },
+    { name: "Privacy", href: "/privacy-policy" },
+    { name: "Legal", href: "###" },
+  ];
   return (
     <div className="relative">
       <Container>
@@ -51,10 +55,10 @@ export function Footer() {
               {legal.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href={item.href}
                   className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
-                  {item}
+                  {item.name}
                 </Link>
               ))}
             </div>
